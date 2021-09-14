@@ -50,14 +50,14 @@ const AddProducts = () => {
 
                             <option>دسته ( گروه ) مورد نظر را انتخاب کنید</option> 
 
-                            {categoris.map((P)=> <option>{P.Categorie}</option>)}
+                            {categoris.map((P,index)=> <option key={index}>{P.Categorie}</option>)}
                             
 
                         </select>
                     </div>
                 </div>
                
-                <button className={Styles.button_submit}onClick = { ()=>{ return setInputCreateProduct("") , inputProduct.current.value = "", InputCreateProduct.length > 2 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
+                <button className={Styles.button_submit} onClick = { ()=>{ return setInputCreateProduct("") , inputProduct.current.value = "", InputCreateProduct.length > 2 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
     
             </div>
         

@@ -1,12 +1,12 @@
 import Styles from "../Style Madule/Style.module.css"
 import { AiFillShopping } from "react-icons/ai";
-import Logo from '../../image/2.png'
 import { Products } from "../Context/ContextProvider";
 
-console.log(Logo)
 
 const TopHeader = () => {
+
     const product = Products()
+
     return ( 
        
             <div className={Styles.Header_TopMenu}>

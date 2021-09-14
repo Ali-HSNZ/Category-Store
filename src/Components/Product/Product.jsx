@@ -10,7 +10,7 @@ const Product = () => {
 
             <p style={{textAlign:"center"}}>نمایش محصول</p>
             <ul style={{ marginTop:'25px',overflowY:'scroll',height:'400px',width:"100%",display:'flex',flexDirection:'column',alignItems:'center',textAlign:'center',justifyContent:'space-between'}}>
-                    {product.map((P)=> <li className={Styles.ShowProduct_product}><p> دسته بندی : {P.Categorie === "" || P.Categorie === ('دسته ( گروه ) مورد نظر را انتخاب کنید') ? "نامشخص" : P.Categorie }</p><p> {P.Name}</p></li>)}
+                    {product.map((P,index)=> <li key={index} className={Styles.ShowProduct_product}><p> دسته بندی : {P.Categorie === "" || P.Categorie === ('دسته ( گروه ) مورد نظر را انتخاب کنید') ? "نامشخص" : P.Categorie }</p><p> {P.Name}</p></li>)}
             </ul>
         
         </div>

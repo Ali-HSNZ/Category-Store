@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
 
 const Product = createContext()
 const SetProduct = createContext()
@@ -10,11 +9,11 @@ const SetMenuCategorie = createContext()
 const ContextProvider = ({children}) => {
     
     const [product,setProduct] = useState([
-        {id : 0,Name : 'یخچال',Categorie : "لوازم خانگی"},
-        {id : 1,Name : 'لباس کودک',Categorie : "پوشاک"},
-        {id : 2,Name : 'کنسول بازی',Categorie : "لوازم دیجیتالی"},
-        {id : 3,Name : 'آچار فرانسه',Categorie : "ابزار آلات"},
-        {id : 4,Name : 'پنج‌شاخ',Categorie : "محصولات کشاورزی"},
+        {id : 0,Name : 'یخچال'},
+        {id : 1,Name : 'لباس کودک'},
+        {id : 2,Name : 'کنسول بازی'},
+        {id : 3,Name : 'آچار فرانسه'},
+        {id : 4,Name : 'پنج‌شاخ'},
       
     ])
 
@@ -28,9 +27,7 @@ const ContextProvider = ({children}) => {
 
     
 
-    useEffect(()=>{
-        console.log(product)
-    },[product])
+
 
     return ( 
 
