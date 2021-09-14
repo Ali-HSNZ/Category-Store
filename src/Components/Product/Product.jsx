@@ -10,9 +10,9 @@ const Product = () => {
         <div className={Styles.ShowProduct}>
 
             <p style={{textAlign:"center"}}>نمایش محصول</p>
-            <ul style={{ marginTop:'25px',overflowY:'scroll',height:'400px',width:"100%",display:'flex',flexDirection:'column',alignItems:'center',textAlign:'center'}}>
+            <ul className={Styles.Product_ul}>
                     {product.length === 0 && <p style={{color:'red',fontWeight:'700'}}> محصولی ثبت نشده است</p>}
-                    {product.map((P,index)=>  product.length === 0 ? <li>No data</li> : <li key={index} className={Styles.ShowProduct_product}><p> دسته بندی : {P.Categorie === "" || P.Categorie === ('دسته ( گروه ) مورد نظر را انتخاب کنید') ? "نامشخص" : P.Categorie }</p><p> {P.Name}</p></li>)}
+                    {product.map((P,index)=> <li key={index} className={Styles.ShowProduct_product}><p> دسته بندی : {P.Categorie === "" || P.Categorie === ('دسته ( گروه ) مورد نظر را انتخاب کنید') ? "نامشخص" : P.Categorie }</p><p> {P.Name}</p></li>)}
             </ul>
         
         </div>
