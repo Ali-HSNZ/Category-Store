@@ -7,6 +7,7 @@ const Menu = () => {
         return ( 
 
                 <div className={Styles.Header_Menu}>
+                        {categori.length === 0 && <p style={{color : 'red' , fontWeight : '700'}}>دسته بندی ( گروه ) ثبت نشده است</p>}
                         {categori.map((P,index) => {return   <a href='#' key={index}>{P.Categorie}</a>})}
                 </div>
 
