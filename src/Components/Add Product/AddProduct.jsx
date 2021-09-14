@@ -39,7 +39,7 @@ const AddProducts = () => {
                             className={Styles.input}
                             ref={inputProduct} 
                             onChange={ ChangeProductInput}
-                            placeholder="نام محصول خود را وارد کنید (بیشتر از 2 کاراکتر)"
+                            placeholder="نام محصول خود را وارد کنید ( از 2 کاراکتر)"
                         />
 
                     </div>
@@ -57,7 +57,7 @@ const AddProducts = () => {
                     </div>
                 </div>
                
-                <button className={Styles.button_submit} onClick = { ()=>{ return setInputCreateProduct("") , inputProduct.current.value = "", InputCreateProduct.length > 2 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
+                <button className={Styles.button_submit} onClick = { ()=>{ return setInputCreateProduct("") , inputProduct.current.value = "", InputCreateProduct.length > 1 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
     
             </div>
         

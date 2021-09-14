@@ -9,20 +9,20 @@ const SetMenuCategorie = createContext()
 const ContextProvider = ({children}) => {
     
     const [product,setProduct] = useState([
-        {id : 0,Name : 'یخچال'},
-        {id : 1,Name : 'لباس کودک'},
-        {id : 2,Name : 'کنسول بازی'},
-        {id : 3,Name : 'آچار فرانسه'},
-        {id : 4,Name : 'پنج‌شاخ'},
+        // {id : 0,Name : 'یخچال'},
+        // {id : 1,Name : 'لباس کودک'},
+        // {id : 2,Name : 'کنسول بازی'},
+        // {id : 3,Name : 'آچار فرانسه'},
+        // {id : 4,Name : 'پنج‌شاخ'},
       
     ])
 
     const [MenuCategories , setMenuCategorie] = useState([
-        {Categorie : "لوازم خانگی"},
-        {Categorie : "پوشاک"},
-        {Categorie : "لوازم دیجیتالی"},
-        {Categorie : "ابزار آلات"},
-        {Categorie : "محصولات کشاورزی"},
+        // {Categorie : "لوازم خانگی"},
+        // {Categorie : "پوشاک"},
+        // {Categorie : "لوازم دیجیتالی"},
+        // {Categorie : "ابزار آلات"},
+        // {Categorie : "محصولات کشاورزی"},
     ])
 
     

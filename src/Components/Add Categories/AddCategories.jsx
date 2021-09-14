@@ -33,7 +33,7 @@ const AddCategorie = () => {
                             className={Styles.input} 
                             onChange={(e)=>ChangeCategorieInput(e)}
                             ref={inputCategorie} 
-                            placeholder={'نام دسته بندی خود را وارد کنید... (بیشتر از 2 کاراکتر)'}
+                            placeholder={'نام دسته بندی خود را وارد کنید... (از 2 کاراکتر)'}
                         />
 
                     </div>
@@ -41,7 +41,7 @@ const AddCategorie = () => {
                
                 </div>
                 
-                <button className={Styles.button_submit} onClick={()=>{return setInputCreateCategories("") , inputCategorie.current.value = "" , InputCreateCategories.length >2 && AddCategori(InputCreateCategories)}}>
+                <button className={Styles.button_submit} onClick={()=>{return setInputCreateCategories("") , inputCategorie.current.value = "" , InputCreateCategories.length > 1 && AddCategori(InputCreateCategories)}}>
                     تایید
                 </button>        
                    
