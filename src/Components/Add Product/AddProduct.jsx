@@ -11,18 +11,7 @@ const AddProducts = () => {
     const [InputCreateProduct,setInputCreateProduct] = useState('')
     const [SelectOption,setSelectOption] = useState('')
 
-   
-    const inputProduct = useRef();
-    const SelectOptions = useRef()
 
-    const ChangeProductInput = (e) => {
-        setInputCreateProduct(e.target.value)
-       
-    }
-
-    const ChangeSelectOption = (e) => {
-        setSelectOption(e.target.value)
-    }
 
     return ( 
 
@@ -37,8 +26,8 @@ const AddProducts = () => {
                             type='text'
                             id={"Name"} 
                             className={Styles.input}
-                            ref={inputProduct} 
-                            onChange={ ChangeProductInput}
+                          
+                            onChange={ e => setInputCreateProduct(e.target.value)}
                             placeholder="نام محصول خود را وارد کنید ( از 2 کاراکتر)"
                         />
 
@@ -46,7 +35,7 @@ const AddProducts = () => {
                     
                     <div className={Styles.input_group}>
                         <p className={Styles.input_group_p} >دسته بندی</p>
-                        <select className={Styles.input} onChange={(e)=>ChangeSelectOption(e)} ref={SelectOptions}>
+                        <select className={Styles.input} onChange={ e => setSelectOption(e.target.value)}>
 
                             <option>دسته ( گروه ) مورد نظر را انتخاب کنید</option> 
 
@@ -57,7 +46,7 @@ const AddProducts = () => {
                     </div>
                 </div>
                
-                <button className={Styles.button_submit} onClick = { ()=>{ return setInputCreateProduct("") , inputProduct.current.value = "", InputCreateProduct.length > 1 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
+                <button className={Styles.button_submit} onClick = { ()=>{ return setInputCreateProduct("") , InputCreateProduct.length > 1 &&  AddProduct(InputCreateProduct,SelectOption)}}>تایید</button>
     
             </div>
         
