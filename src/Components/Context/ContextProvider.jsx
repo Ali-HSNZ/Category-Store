@@ -44,18 +44,22 @@ export const SetProducts =()=>{
 
     const AddCategori = (value)=> {
 
-        const Categorie = [...categori]
+        // const Categorie = [...categori]
 
-        Categorie.push({id : Categorie.length,Categorie : value})
-        setCategori(Categorie)
+        // Categorie.push()
+
+        setCategori([...categori,{id : categori.length,Categorie : value}])
     }
+    
     const AddProduct = (InputCreateProduct,SelectOption)=> {
 
 
 
-            const Pr = [...MyProducts]
-            Pr.push({id : Pr.length,Name : InputCreateProduct,Categorie : SelectOption})
-            SetProducts(Pr)
+            // const Products = [...MyProducts]
+            // Products.push({})
+            // SetProducts(Products)
+
+            SetProducts([...MyProducts,{id : Products.length,Name : InputCreateProduct,Categorie : SelectOption}])
 
     }
 
